@@ -1,3 +1,6 @@
+from colorama import init, Fore
+init(autoreset=True)
+
 class printer:
     def cprint(text, color):
         print(Fore.color + text)
