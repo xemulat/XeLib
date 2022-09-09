@@ -1,3 +1,8 @@
+from urllib.request import urlretrieve
+from urllib.parse import urlparse
+from colorama import init, Fore
+init(autoreset=True)
+
 class downloader():
     def download(link, name, cmd):
         # REPORTER IS WORKING, DO NOT TOUCH IT
