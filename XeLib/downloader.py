@@ -1,6 +1,7 @@
 from urllib.request import urlretrieve
 from urllib.parse import urlparse
 from colorama import init, Fore
+from os.path import basename, isfile
 init(autoreset=True)
 
 class downloader():
