@@ -8,4 +8,3 @@ def isinternet(website):
         return "Timeout"
     else:
         return "Ping - " + str(round(pinged, 2)) + "ms"
-print(isinternet("github.com"))
