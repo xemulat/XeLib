@@ -1,11 +1,8 @@
 from urllib.request import urlretrieve
-from urllib.parse import urlparse
 from colorama import init, Fore
-from os.path import basename, isfile
 init(autoreset=True)
 
-def download(link, name, cmd):
-    # REPORTER IS WORKING, DO NOT TOUCH IT
+def download(link, fnam, name):
     def reporter(block_num, block_size, total_size):
         read_so_far = block_num * block_size
         if total_size > 0:
@@ -18,11 +15,6 @@ def download(link, name, cmd):
 
     if not "https://" in link:
         link = "https://" + link
-    if cmd == False:
-        print("Downloading " + name + " ...")
-        urlretrieve(link, basename(urlparse(link).path), reporter)
-        print(name + ' Downloaded!')
-    else:
-        print(Fore.RED + "[>] " + "Downloading " + name + " ...")
-        urlretrieve(link, basename(urlparse(link).path), reporter)
-        print(Fore.RED + "[>] " + name + ' Downloaded!')
+    print(Fore.RED + "[>] " + "Downloading " + name + " ...")
+    urlretrieve(link, fnam, reporter)
+    print(Fore.RED + "[>] " + name + ' Downloaded!')
