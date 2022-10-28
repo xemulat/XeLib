@@ -4,10 +4,11 @@ init(autoreset=True)
 
 def download(link, fnam, name):
     def reporter(block_num, block_size, total_size):
-        read_so_far = block_num * block_size
+        read_so_far = int(str((block_num * block_size) / 1024).split(".", 1)[0])
+        total_size = int(str(total_size / 1024).split(".", 1)[0])
         if total_size > 0:
             percent = read_so_far * 1e2 / total_size
-            print(f"\r{percent:5.1f}% {read_so_far:{len(str(total_size))}} out of {total_size}", end='')
+            print(f"\r{percent:5.1f}% {read_so_far:{len(str(total_size))}} out of {total_size}kb", end='')
             if read_so_far >= total_size:
                 print()
         else:
