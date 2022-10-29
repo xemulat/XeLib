@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'XeLib',
   packages = ['XeLib'],
-  version = '0.6',
+  version = '0.7',
   license='mit',
   description = "Xemulated's QOL Library",
   author = 'Xemulated',
   author_email = 'xemulated@tuta.io',
   url = 'https://github.com/xemulat',
-  download_url = 'https://github.com/xemulat/XeLib/archive/refs/tags/0.6.tar.gz',
+  download_url = 'https://github.com/xemulat/XeLib/archive/refs/tags/0.7.tar.gz',
   keywords = ['QOL', 'xemulated', 'downloader'],
   install_requires=['colorama', 'ping3'],
   classifiers=[
