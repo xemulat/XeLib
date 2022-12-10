@@ -1,9 +1,17 @@
 from colorama import Fore, init
+
+# Initialize the colorama module with autoreset enabled
 init(autoreset=True)
+
+# Define a function that takes a string and a color number
+# and returns the string with the specified color
 def color(text, color):
     if color == 1:
-        return(Fore.GREEN+text+Fore.WHITE)
+        # Return the text with green color
+        return(Fore.GREEN + text + Fore.RESET)
     elif color == 2:
-        return(Fore.RED+text+Fore.WHITE)
+        # Return the text with red color
+        return(Fore.RED + text + Fore.RESET)
     elif color == 3:
-        return(Fore.MAGENTA+text+Fore.WHITE)
+        # Return the text with magenta color
+        return(Fore.MAGENTA + text + Fore.RESET)

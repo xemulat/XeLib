@@ -2,15 +2,15 @@ from distutils.core import setup
 setup(
   name = 'XeLib',
   packages = ['XeLib'],
-  version = '0.7',
+  version = '0.8',
   license='mit',
   description = "Xemulated's QOL Library",
   author = 'Xemulated',
   author_email = 'xemulated@tuta.io',
   url = 'https://github.com/xemulat',
-  download_url = 'https://github.com/xemulat/XeLib/archive/refs/tags/0.7.tar.gz',
+  download_url = 'https://github.com/xemulat/XeLib/archive/refs/tags/0.8.tar.gz',
   keywords = ['QOL', 'xemulated', 'downloader'],
-  install_requires=['colorama', 'ping3'],
+  install_requires=['colorama', 'ping3', 'tqdm', 'functools'],
   classifiers=[
     'Development Status :: 4 - Beta',      # "3 - Alpha", "4 - Beta" or "5 - Production/Stable"
     'Intended Audience :: Developers',
