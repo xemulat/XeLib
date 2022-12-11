@@ -8,8 +8,8 @@ def getmyping():
     # Check if the ping to github.com is successful
     if ping("github.com") == False or None:
         # Return "None" with red color if the ping failed
-        return(Fore.RED + "None")
+        return("None")
     else:
         # Otherwise, get the ping time and return it with green color
         peng = (str(ping("github.com", unit='ms')).split(".", 1)[0])
-        return(Fore.GREEN + peng + "ms")
+        return(peng + "ms")

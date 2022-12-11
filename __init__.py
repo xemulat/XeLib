@@ -1,6 +1,5 @@
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import closing
-from functools import lru_cache
 from os import system
 from os.path import basename, isfile
 from platform import system as platform

@@ -6,14 +6,12 @@ from urllib.parse import urlparse
 from requests import Session
 from requests.adapters import HTTPAdapter
 
-from functools import lru_cache
 from colorama import Fore, init
 from tqdm import tqdm
 
 init(autoreset=True)
 
 def download(link, fnam, name):
-    @lru_cache(maxsize=None)
     def download(link, fnam, name):
         # Check if the file specified by 'fnam' already exists on the file system.
         if isfile(fnam) == False:
@@ -53,7 +51,8 @@ def download(link, fnam, name):
                 block_size = 4096 # 4 Kibibytes
 
                 # Create a progress bar to display the download progress.
-                progress_bar = tqdm(total=total_size, unit='iB', unit_scale=True)
+
+                progress_bar = tqdm(total=total_size, unit='iB', unit_scale=True, bar_format='{desc}: {percentage:3.0f}% │ {bar} │ {n_fmt} / {total_fmt} ║ {elapsed} ─ {remaining} │ {rate_fmt}')
 
                 # Open the file for writing and download the file in chunks.
                 with open(fnam, 'wb') as file:

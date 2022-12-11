@@ -4,9 +4,6 @@ from colorama import init, Fore
 init(autoreset=True)
 
 class printer:
-    # Define a class method that takes a string and a color name
-    # and prints the string with the specified color
-
     # Define a class method that takes a string and prints it with blue color
     def blue(text):
         print(Fore.BLUE + text)
